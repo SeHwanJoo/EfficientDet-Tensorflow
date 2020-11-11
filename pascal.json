@@ -1,0 +1,82 @@
+{
+  "1": {
+    "id": 1,
+    "name": "aeroplane"
+  },
+  "2": {
+    "id": 2,
+    "name": "bicycle"
+  },
+  "3": {
+    "id": 3,
+    "name": "bird"
+  },
+  "4": {
+    "id": 4,
+    "name": "boat"
+  },
+  "5": {
+    "id": 5,
+    "name": "bottle"
+  },
+  "6": {
+    "id": 6,
+    "name": "bus"
+  },
+  "7": {
+    "id": 7,
+    "name": "car"
+  },
+  "8": {
+    "id": 8,
+    "name": "cat"
+  },
+  "9": {
+    "id": 9,
+    "name": "chair"
+  },
+  "10": {
+    "id": 10,
+    "name": "cow"
+  },
+  "11": {
+    "id": 11,
+    "name": "diningtable"
+  },
+  "12": {
+    "id": 12,
+    "name": "dog"
+  },
+  "13": {
+    "id": 13,
+    "name": "horse"
+  },
+  "14": {
+    "id": 14,
+    "name": "motorbike"
+  },
+  "15": {
+    "id": 15,
+    "name": "person"
+  },
+  "16": {
+    "id": 16,
+    "name": "pottedplant"
+  },
+  "17": {
+    "id": 17,
+    "name": "sheep"
+  },
+  "18": {
+    "id": 18,
+    "name": "sofa"
+  },
+  "19": {
+    "id": 19,
+    "name": "train"
+  },
+  "20": {
+    "id": 20,
+    "name": "tvmonitor"
+  }
+}
