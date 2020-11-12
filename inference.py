@@ -14,14 +14,7 @@ from utils import preprocess_image, postprocess_boxes
 from utils.draw_boxes import draw_boxes
 
 
-
 def check_args(parsed_args):
-    if parsed_args.gpu and parsed_args.batch_size < len(parsed_args.gpu.split(',')):
-        raise ValueError(
-            "Batch size ({}) must be equal to or higher than the number of GPUs ({})".format(parsed_args.batch_size,
-                                                                                             len(parsed_args.gpu.split(
-                                                                                                 ','))))
-
     return parsed_args
 
 
@@ -33,12 +26,12 @@ def parse_args(args):
     pascal_parser = subparsers.add_parser('pascal')
     pascal_parser.add_argument('pascal_path', help='Path to dataset directory (ie. /tmp/VOCdevkit).')
 
-    parser.add_argument('--model-path', help='Inference from a model path.')
+    parser.add_argument('--model-path', help='Inference from a model path.', type=str)
     parser.add_argument('--weighted-bifpn', help='Use weighted BiFPN', action='store_true', default=False)
 
     parser.add_argument('--phi', help='Hyper parameter phi', default=0, type=int, choices=(0, 1, 2, 3, 4, 5, 6))
-    parser.add_argument('--gpu', help='Id of the GPU to use (as reported by nvidia-smi).', type=int, default=4)
-    parser.add_argument('--gpu', help='score threshold', default=0.5, type=float)
+    parser.add_argument('--gpu', help='Id of the GPU to use (as reported by nvidia-smi).', type=str, default='4')
+    parser.add_argument('--score-threshold', help='score threshold', default=0.5, type=float)
 
     print(vars(parser.parse_args(args)))
     return check_args(parser.parse_args(args))
@@ -78,7 +71,7 @@ def main(args=None):
     i = 0
     path = os.path.join('detection', model_path.split('/')[-1][:-3])
     os.makedirs(path, exist_ok=True)
-    for image_path in glob.glob(args.pascal_path):
+    for image_path in glob.glob(args.pascal_path + '/*.jpg'):
         image = cv2.imread(image_path)
         src_image = image.copy()
         # BGR -> RGB
