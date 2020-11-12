@@ -52,7 +52,7 @@ use RTX-2080Ti FP32 + Tensorflow 2.2
 
 |Model|mAP 50|latency|Params|input size|
 |:------:|:---:|:---:|:---:|:---:|
-|EfficientDet-b0|49.05%|33|3.9M|512|
+|EfficientDet-b0|72.27%|33|3.9M|512|
 |EfficientDet-b1|training| | |640|
 |EfficientDet-b2|training| | |768|
 |EfficientDet-b3|training| | |896|
