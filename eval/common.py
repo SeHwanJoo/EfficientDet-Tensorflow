@@ -289,13 +289,13 @@ if __name__ == '__main__':
     }
     test_generator = PascalVocGenerator(
         '../datasets/VOC2012',
-        'trainval',
+        'val',
         shuffle_groups=False,
         skip_truncated=False,
         skip_difficult=True,
         **common_args
     )
-    model_path = '../checkpoints/2020-11-07/pascal_50_0.3354_0.5085.h5'
+    model_path = '../checkpoints/2020-11-11/pascal_62_0.1930_0.6203.h5'
     input_shape = (test_generator.image_size, test_generator.image_size)
     anchors = test_generator.anchors
     num_classes = test_generator.num_classes()
