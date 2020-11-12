@@ -38,7 +38,7 @@ def create_callbacks(prediction_model, validation_generator, args, step1=False):
 
     if step1:
         earlyStopping = tf.keras.callbacks.EarlyStopping(
-            monitor='loss', min_delta=0, patience=5, verbose=0, mode='auto',
+            monitor='val_loss', min_delta=0, patience=5, verbose=0, mode='auto',
             baseline=None, restore_best_weights=False
         )
         callbacks.append(earlyStopping)
@@ -212,7 +212,7 @@ def parse_args(args):
     parser.add_argument('--no-evaluation', help='Disable per epoch evaluation.', dest='evaluation',
                         action='store_false')
     parser.add_argument('--random-transform', help='Randomly transform image and annotations.', action='store_true')
-    parser.add_argument('--compute-val-loss', help='Compute validation loss during training', dest='compute_val_loss',
+    parser.add_argument('--compute-val-loss', default=True, help='Compute validation loss during training', dest='compute_val_loss',
                         action='store_true')
 
     # Fit generator arguments
@@ -308,7 +308,7 @@ def main(args=None):
         model.fit_generator(
             generator=train_generator,
             steps_per_epoch=train_generator.size() // args.step1_batch_size,
-            epochs=1,
+            epochs=args.step1_epochs,
             verbose=1,
             callbacks=callbacks,
             workers=args.workers,
