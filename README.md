@@ -68,13 +68,13 @@ TensorFlow2.1 + CUDA10.1, no TensorRT + Titan-V FP32
 
 |Model|mAP 50|latency|Params|input size|
 |:------:|:---:|:---:|:---:|:---:|
-|EfficientDet-b0|53.0%|12| |512|
-|EfficientDet-b1|59.1%|16| |640|
-|EfficientDet-b2|62.7%|23| |768|
-|EfficientDet-b3|65.9%|37| |896|
-|EfficientDet-b4|68.4%|65| |1024|
-|EfficientDet-b5|70.5%|128| |1280|
-|EfficientDet-b6|71.5%|169| |1280|
+|EfficientDet-b0|53.0%|12|3.9M|512|
+|EfficientDet-b1|59.1%|16|6.6M|640|
+|EfficientDet-b2|62.7%|23|8.1M|768|
+|EfficientDet-b3|65.9%|37|12M|896|
+|EfficientDet-b4|68.4%|65|21M|1024|
+|EfficientDet-b5|70.5%|128|34M|1280|
+|EfficientDet-b6|71.5%|169|52M|1280|
 
 ##### EfficientDet-b0
     155 instances of class aeroplane with average precision: 0.7838
@@ -119,3 +119,4 @@ TensorFlow2.1 + CUDA10.1, no TensorRT + Titan-V FP32
 - inference video
 - train on EfficientDet 1 ~ 6
 - speed up inference
+- tracking
