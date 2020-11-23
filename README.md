@@ -52,7 +52,7 @@ use RTX-2080Ti FP32 + Tensorflow 2.2
 
 |Model|mAP 50|latency|Params|input size|
 |:------:|:---:|:---:|:---:|:---:|
-|EfficientDet-b0|72.27%|33|3.9M|512|
+|EfficientDet-b0|76.02%|33|3.9M|512|
 |EfficientDet-b1|training| | |640|
 |EfficientDet-b2|training| | |768|
 |EfficientDet-b3|training| | |896|
@@ -77,28 +77,30 @@ TensorFlow2.1 + CUDA10.1, no TensorRT + Titan-V FP32
 |EfficientDet-b6|71.5%|169|52M|1280|
 
 ##### EfficientDet-b0
-    155 instances of class aeroplane with average precision: 0.7838
-    177 instances of class bicycle with average precision: 0.7735
-    243 instances of class bird with average precision: 0.7284
-    150 instances of class boat with average precision: 0.6393
-    252 instances of class bottle with average precision: 0.5341
-    114 instances of class bus with average precision: 0.7432
-    625 instances of class car with average precision: 0.8182
-    190 instances of class cat with average precision: 0.9127
-    398 instances of class chair with average precision: 0.4771
-    123 instances of class cow with average precision: 0.7931
-    112 instances of class diningtable with average precision: 0.5486
-    257 instances of class dog with average precision: 0.8554
-    180 instances of class horse with average precision: 0.8617
-    172 instances of class motorbike with average precision: 0.8173
-    2332 instances of class person with average precision: 0.7494
-    266 instances of class pottedplant with average precision: 0.3469
-    127 instances of class sheep with average precision: 0.7430
-    124 instances of class sofa with average precision: 0.6998
-    152 instances of class train with average precision: 0.8585
-    158 instances of class tvmonitor with average precision: 0.7691
     
-    mAP: 0.7227
+    155 instances of class aeroplane with average precision: 0.8160
+    177 instances of class bicycle with average precision: 0.8393
+    243 instances of class bird with average precision: 0.8006
+    150 instances of class boat with average precision: 0.6968
+    252 instances of class bottle with average precision: 0.5521
+    114 instances of class bus with average precision: 0.7580
+    625 instances of class car with average precision: 0.8394
+    190 instances of class cat with average precision: 0.9346
+    398 instances of class chair with average precision: 0.5448
+    123 instances of class cow with average precision: 0.7831
+    112 instances of class diningtable with average precision: 0.5492
+    257 instances of class dog with average precision: 0.9013
+    180 instances of class horse with average precision: 0.8882
+    172 instances of class motorbike with average precision: 0.8313
+    2332 instances of class person with average precision: 0.7872
+    266 instances of class pottedplant with average precision: 0.4743
+    127 instances of class sheep with average precision: 0.7530
+    124 instances of class sofa with average precision: 0.7494
+    152 instances of class train with average precision: 0.8890
+    158 instances of class tvmonitor with average precision: 0.8169
+    mAP: 0.7602
+
+
 
 
 
