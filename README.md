@@ -1,4 +1,4 @@
-# YOLO V3
+# EfficientDet
 
 ## paper
 [EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/abs/1911.09070)
